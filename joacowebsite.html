@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Personal website of Joaquin Rivero, Mathematics student at TU Berlin." />
+	<title>Joaquin Rivero</title>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<style>
+		/* Collapsible book lists */
+		details.books summary {
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			cursor: pointer;
+			list-style: none;
+		}
+		details.books summary::-webkit-details-marker {
+			display: none;
+		}
+		/* Arrow to the right of the title */
+		details.books summary::after {
+			content: "▸";
+		}
+		details.books[open] summary::after {
+			content: "▾";
+		}
+		details.books summary h4 {
+			margin: 0;
+		}
+		details.books ul {
+			margin: 1em 0 0 0;
+			padding-left: 1.2em;
+			list-style: disc;
+		}
+		details.books li {
+			margin-bottom: 0.8em;
+		}
+		details.books li p {
+			margin: 0.2em 0 0 0;
+			font-size: 0.9em;
+		}
+		.book-row {
+			margin-bottom: 1em;
+		}
+
+		/* Emoji icons for "Things I can do" */
+		ul.feature-icons li {
+			display: inline-flex;      /* inline-flex keeps the 2-column layout */
+			align-items: center;       /* vertically centers emoji and text */
+			gap: 1em;
+			padding: 0;                /* removes the old left/top padding */
+			min-height: 3em;
+		}
+		ul.feature-icons li::before {
+			content: attr(data-emoji);
+			position: static;          /* no longer absolutely positioned */
+			flex: 0 0 3em;             /* fixed-size circle that never shrinks */
+			width: 3em;
+			height: 3em;
+			line-height: 3em;
+			text-align: center;
+			border-radius: 100%;
+			background: transparent;
+			font-family: inherit;
+			font-weight: normal;
+			font-size: 1.2em;
+		}
+
+		/* Portrait in the About section */
+		.intro-photo {
+			margin-bottom: 1.2em;
+		}
+		.intro-photo img {
+			display: block;
+			width: 100%;
+			max-width: 260px;
+			height: auto;
+			border-radius: 0.5em;
+		}
+
+		/* Links aligned in one row under the portrait */
+		ul.intro-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5em 1.5em;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul.intro-links li {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Small screens: columns stack, so keep the photo small and centered */
+		@media (max-width: 736px) {
+			.intro-photo img {
+				max-width: 180px;
+				margin: 0 auto;
+			}
+			ul.intro-links {
+				justify-content: center;
+			}
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<h1 id="logo"><a href="#">Joaquin Rivero</a></h1>
+			<p>Student</p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#one" class="active">About</a></li>
+				<li><a href="#two">Things I Can Do</a></li>
+				<li><a href="#three">A Few Accomplishments</a></li>
+				<li><a href="#four">Books I Like</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://www.instagram.com/joacoorivero_/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.linkedin.com/in/joaco-rivero-b878aa1a8/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="joaquin.rivero004@icloud.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="container">
+					<header class="major">
+						<h2>Joaco Rivero</h2>
+					</header>
+					<div class="row gtr-uniform">
+
+						<!-- Left: portrait + links -->
+						<div class="col-4 col-5-medium col-12-small">
+							<div class="intro-photo">
+								<img src="documents/Joaquin 1.jpeg" alt="Portrait of Joaquin Rivero" />
+							</div>
+							<ul class="intro-links">
+								<li><a href="documents/Lebenslauf.pdf" target="_blank">CV</a></li>
+								<li><a href="https://www.linkedin.com/in/joaco-rivero-b878aa1a8/">LinkedIn</a></li>
+								<li><a href="https://www.instagram.com/joacoorivero_/">Instagram</a></li>
+							</ul>
+						</div>
+
+						<!-- Right: title + text -->
+						<div class="col-8 col-7-medium col-12-small">
+							<h3>A brief introduction</h3>
+							<p>Hi, I'm Joaquin Rivero. I was born in Argentina and I'm currently studying Mathematics at TU Berlin.
+							I enjoy running, reading, sleeping, chocolate, and a few other things. I'm especially interested in topics that connect the natural sciences with technology.
+							Below you can find a bit more information about me.</p>
+							<p>Cheers!</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- Two -->
+			<section id="two">
+				<div class="container">
+					<h3>Some things I can do</h3>
+					<ul class="feature-icons">
+						<li data-emoji="💻">LaTeX, SQL, Excel, Python (Basics)</li>
+						<li data-emoji="🌐">Build a website (apparently)</li>
+						<li data-emoji="📚">Mathematics</li>
+						<li data-emoji="🧉">Drink mate</li>
+						<li data-emoji="🗣️">Spanish, German, English</li>
+						<li data-emoji="🎸">Play the guitar</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
+				<div class="container">
+					<h3>A Few Accomplishments</h3>
+					<div class="features">
+						<article>
+							<a href="#" class="image"><img src="documents/Berlin.jpeg" alt="Berlin" /></a>
+							<div class="inner">
+								<h4>Started my Bachelor's degree in Mathematics!</h4>
+								<p>October 7, 2025. Thanks to my Ausbildung, I was able to start my Bachelor's degree in Mathematics at TU Berlin.</p>
+							</div>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="documents/BBZ.jpeg" alt="Graduation at BBZ" /></a>
+							<div class="inner">
+								<h4>Finished my Ausbildung at BBZ</h4>
+								<p>December 20, 2024. After two years of working and studying in a joint program between the AHK and Sartorius AG, I finished my Ausbildung.</p>
+							</div>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="documents/MediaBsAs_2024.jpeg" alt="Buenos Aires Half Marathon" /></a>
+							<div class="inner">
+								<h4>Ran my first half marathon</h4>
+								<p>August 25, 2024. After a few months of training, I finally completed my first half marathon.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Four -->
+			<section id="four">
+				<div class="container">
+					<h3>Books I Like</h3>
+					<p>Reading is one of my favorite hobbies. Here are some of my favorite books.</p>
+
+					<section class="box book-row">
+						<details class="books">
+							<summary><h4>Science Fiction</h4></summary>
+							<ul>
+								<li>
+									<strong>From the Earth to the Moon</strong> – Jules Verne
+									<p>A classic about a group of men who build a giant cannon to travel to the Moon.</p>
+								</li>
+								<li>
+									<strong>Journey to the Center of the Earth</strong> – Jules Verne
+									<p>Professor Lidenbrock and his nephew follow a mysterious clue that leads them on an unforgettable journey.</p>
+								</li>
+								<li>
+									<strong>The Martian Chronicles</strong> – Ray Bradbury
+									<p>A collection of stories about humans colonizing Mars and building a new society there.</p>
+								</li>
+							</ul>
+						</details>
+					</section>
+
+					<section class="box book-row">
+						<details class="books">
+							<summary><h4>Biographies (Non-Fiction)</h4></summary>
+							<ul>
+								<li>
+									<strong>The Billion Dollar Molecule</strong> – Barry Werth
+									<p>The story of how Joshua Boger founded Vertex Pharmaceuticals, one of the world's largest biotechnology companies.</p>
+								</li>
+								<li>
+									<strong>Steve Jobs</strong> – Walter Isaacson
+									<p>The life story of one of the people who revolutionized the way we use computers, listen to music, watch movies, and more.</p>
+								</li>
+							</ul>
+						</details>
+					</section>
+
+					<section class="box book-row">
+						<details class="books">
+							<summary><h4>Science</h4></summary>
+							<ul>
+								<li>
+									<strong>Livewired</strong> – David Eagleman
+									<p>Through experiments and case studies, this book shows how the brain can adapt and rewire itself.</p>
+								</li>
+								<li>
+									<strong>A User's Guide to the Brain</strong> – John J. Ratey
+									<p>A book that helps us understand how our brain works, and therefore understand ourselves better.</p>
+								</li>
+								<li>
+									<strong>Mapmatics</strong> – Paulina Rowińska
+									<p>Rowińska shows how abstract mathematical ideas are applied in practical contexts we may never have noticed.</p>
+								</li>
+							</ul>
+						</details>
+					</section>
+
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Joaquin Rivero. All rights reserved.</li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
